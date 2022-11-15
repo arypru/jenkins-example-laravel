@@ -38,7 +38,7 @@ pipeline {
         }
         
        /*Correr seeders*/
-       stage('Correr migraciones') {
+       stage('Correr seeders') {
           steps {
                   sh  'php artisan db:seed'
             }
