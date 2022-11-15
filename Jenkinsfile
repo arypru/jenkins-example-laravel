@@ -2,15 +2,13 @@ pipeline {
     agent any
     stages {
         
-     /*Crea .env file
+     /*Crea .env file*/
       stage('Crear .env') {
           steps {
-              script {
-                  sh  'echo.> .env'
-                  sh  'copy .env.example .env'
-              }
+                  bat  'echo.> .env'
+                  bat  'copy .env.example .env'
             }
-      }*/
+      }
         
       /*Crea .env file
       stage('Install Dependencies') {
