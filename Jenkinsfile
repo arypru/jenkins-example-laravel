@@ -19,7 +19,7 @@ pipeline {
       /*Instalan las dependencias*/
       stage('Install Dependencies') {
           steps {
-                  sh  'composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist'
+                  bat  'composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist'
             }
       }
         
