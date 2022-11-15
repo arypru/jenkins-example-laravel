@@ -20,8 +20,14 @@ pipeline {
       stage('Install Dependencies') {
           steps {
                   bat  'composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist'
-                  bat   'composer --version'
           }
+      }
+      
+      /*Composer version*/
+      stage('Generate key') {
+          steps {
+                  bat  'composer --version'
+            }
       }
         
       /*Genera la key*/
