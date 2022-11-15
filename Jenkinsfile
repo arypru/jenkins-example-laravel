@@ -6,7 +6,7 @@ pipeline {
       stage('Crear .env') {
           steps {
               script {
-                  sh  'php -r "file_exists('.env') || copy ('.env.example', '.env');"'
+                  sh  'cp .env.example .env'
               }
             }
       }
