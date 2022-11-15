@@ -20,27 +20,28 @@ pipeline {
       stage('Install Dependencies') {
           steps {
                   bat  'composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist'
-            }
+                  bat   'composer --version'
+          }
       }
         
-      /*Genera la key
+      /*Genera la key*/
       stage('Generate key') {
           steps {
-                  sh  'php artisan key:generate'
+                  bat  'php artisan key:generate'
             }
       }
        
-       /*Correr migraciones
+       /*Correr migraciones*/
        stage('Correr migraciones') {
           steps {
-                  sh  'php artisan migrate:fresh'
+                  bat  'php artisan migrate:fresh'
             }
         }
         
-       /*Correr seeders
+       /*Correr seeders*/
        stage('Correr seeders') {
           steps {
-                  sh  'php artisan db:seed'
+                  bat  'php artisan db:seed'
             }
         }*/
         
