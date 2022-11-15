@@ -6,8 +6,8 @@ pipeline {
       stage('Crear .env') {
           steps {
               script {
-                  sh  'touch .env'
-                  sh  'cp .env.example .env'
+                  sh  'echo.> .env'
+                  sh  'copy .env.example .env'
               }
             }
       }
