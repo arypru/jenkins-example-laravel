@@ -40,7 +40,7 @@ pipeline {
        /*Correr migraciones*/
        stage('Correr migraciones') {
           steps {
-                  bat  'php artisan migrate:fresh'
+                  bat  'php artisan migrate'
             }
         }
         
