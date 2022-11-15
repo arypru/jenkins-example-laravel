@@ -24,7 +24,7 @@ pipeline {
       }
       
       /*Composer version*/
-      stage('Generate key') {
+      stage('Composer version') {
           steps {
                   bat  'composer --version'
             }
