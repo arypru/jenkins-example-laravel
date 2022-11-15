@@ -1,8 +1,12 @@
 pipeline {
+    agent any
+    
     stages {
       
       stage('hello') {
-        echo "hola mundo en jenkins"
+          steps {
+                echo "hola mundo en jenkins"
+            }
       }
       
         stage('build') {
