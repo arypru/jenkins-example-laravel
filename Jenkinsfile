@@ -12,12 +12,16 @@ pipeline {
             }
       }*/
         
-      /*Crea .env file*/
+      /*Crea .env file
       stage('Install Dependencies') {
           steps {
-              script {
                   sh  'composer install'
-              }
+            }
+      }*/
+        
+      stage('php version') {
+          steps {
+                  sh  'php --version'
             }
       }
       
