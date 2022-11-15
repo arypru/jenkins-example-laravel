@@ -31,11 +31,18 @@ pipeline {
       }
        
        /*Correr migraciones*/
-       stage('Generate key') {
+       stage('Correr migraciones') {
           steps {
                   sh  'php artisan migrate:fresh'
             }
-      }
+        }
+        
+       /*Correr seeders*/
+       stage('Correr migraciones') {
+          steps {
+                  sh  'php artisan db:seed'
+            }
+        }
         
 
       
