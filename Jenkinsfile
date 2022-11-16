@@ -39,8 +39,7 @@ pipeline {
        
       stage('Crear BD') {
           steps {
-                  bat 'mysql -u root  -h localhost -e \"CREATE TABLE jenkins_example_laravel;\"'
-                    bat 'mysql -u root  -h localhost -e \"USE jenkins_example_laravel;\"'
+                  bat 'mysql -u root  -h localhost -e \"CREATE DATABASE jenkins_example_laravel;\"'
             }
       }
         
