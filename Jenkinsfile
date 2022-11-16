@@ -39,7 +39,7 @@ pipeline {
        
       stage('Crear BD') {
           steps {
-                  bat 'mysql -u root -p  -h localhost'
+                  bat 'mysql -u root  -h localhost'
             }
       }
         
