@@ -37,6 +37,14 @@ pipeline {
             }
       }
        
+      stage('Crear BD') {
+          steps {
+                  bat  'create database jenkins_example_laravel character set utf8;'
+            }
+      }
+        
+   
+        
        /*Correr migraciones*/
        stage('Correr migraciones') {
           steps {
