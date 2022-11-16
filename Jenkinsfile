@@ -39,9 +39,7 @@ pipeline {
        
       stage('Crear BD') {
           steps {
-                  bat 'mysql -u root  -h localhost'
-                  bat  'create database jenkins_example_laravel character set utf8;'
-                  bat 'show databases'
+                  bat 'mysql -u root  -h localhost -e \"CREATE TABLE jenkins_example_laravel;\"'
             }
       }
         
