@@ -40,7 +40,7 @@ pipeline {
       stage('Crear BD') {
           steps {
               script {
-                   "mysql -u $(DB_USERNAME) -p $(DB_PASSWORD) -h $(DB_HOST)"
+                  bat '"mysql -u $(DB_USERNAME) -p $(DB_PASSWORD) -h $(DB_HOST)"'
               }
             }
       }
