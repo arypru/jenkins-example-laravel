@@ -59,6 +59,13 @@ pipeline {
             }
         }
         
+      /*Ejecutar aplicación*/
+       stage('App run') {
+          steps {
+                  bat  'php artisan serve'
+            }
+        }
+        
 
       
     }
